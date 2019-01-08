@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeakApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwp-Qa-8vl">
+                                <rect key="frame" x="0.0" y="53" width="375" height="561"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You will learn how to speak like me someday." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-z1-PzO">
+                                        <rect key="frame" x="15" y="37" width="344" height="201"/>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.24313725489999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="201" id="1Eo-J6-SEX"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAd-of-UTq">
+                                        <rect key="frame" x="133" y="265" width="108" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3YJ-lU-2ai"/>
+                                            <constraint firstAttribute="width" constant="108" id="kT0-jD-HFl"/>
+                                        </constraints>
+                                        <state key="normal" title="Speak like Yoda">
+                                            <color key="titleColor" red="0.47058823529999999" green="0.65098039220000004" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="speakLikeYodaWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cno-Ny-fC2"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="07F-fE-y7s">
+                                        <rect key="frame" x="15" y="335" width="344" height="199"/>
+                                        <color key="backgroundColor" red="0.47058823529999999" green="0.65098039220000004" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="199" id="8Om-y5-gTy"/>
+                                        </constraints>
+                                        <inset key="scrollIndicatorInsets" minX="0.0" minY="24" maxX="0.0" maxY="0.0"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9bm-mh-6rE">
+                                        <rect key="frame" x="169" y="416" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9bm-mh-6rE" firstAttribute="centerY" secondItem="07F-fE-y7s" secondAttribute="centerY" id="0EK-0C-ebs"/>
+                                    <constraint firstItem="ciS-z1-PzO" firstAttribute="top" secondItem="Qwp-Qa-8vl" secondAttribute="top" constant="37" id="2lB-gO-Ru5"/>
+                                    <constraint firstItem="TAd-of-UTq" firstAttribute="centerX" secondItem="Qwp-Qa-8vl" secondAttribute="centerX" id="BxG-23-lTk"/>
+                                    <constraint firstAttribute="bottom" secondItem="07F-fE-y7s" secondAttribute="bottom" constant="27" id="Oib-6D-OP3"/>
+                                    <constraint firstItem="07F-fE-y7s" firstAttribute="trailing" secondItem="ciS-z1-PzO" secondAttribute="trailing" id="aue-zb-Nil"/>
+                                    <constraint firstAttribute="height" constant="561" id="cjN-xf-eYz"/>
+                                    <constraint firstItem="ciS-z1-PzO" firstAttribute="centerX" secondItem="Qwp-Qa-8vl" secondAttribute="centerX" id="ebn-vP-K8K"/>
+                                    <constraint firstItem="TAd-of-UTq" firstAttribute="centerY" secondItem="Qwp-Qa-8vl" secondAttribute="centerY" id="flM-0i-N20"/>
+                                    <constraint firstItem="ciS-z1-PzO" firstAttribute="leading" secondItem="Qwp-Qa-8vl" secondAttribute="leading" constant="15" id="mHs-d9-F6h"/>
+                                    <constraint firstItem="07F-fE-y7s" firstAttribute="leading" secondItem="ciS-z1-PzO" secondAttribute="leading" id="o51-qM-6qH"/>
+                                    <constraint firstItem="9bm-mh-6rE" firstAttribute="centerX" secondItem="07F-fE-y7s" secondAttribute="centerX" id="ytb-1z-BY4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qwp-Qa-8vl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YKP-BO-yk1"/>
+                            <constraint firstAttribute="trailing" secondItem="Qwp-Qa-8vl" secondAttribute="trailing" id="oCW-bT-kjh"/>
+                            <constraint firstItem="Qwp-Qa-8vl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w3D-Nj-E34"/>
+                            <constraint firstItem="Qwp-Qa-8vl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zpP-zm-ItO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="9bm-mh-6rE" id="yIJ-JI-jm5"/>
+                        <outlet property="inputTextView" destination="ciS-z1-PzO" id="gpI-2t-MMF"/>
+                        <outlet property="yodaLikeTextView" destination="07F-fE-y7s" id="gSX-Ef-W33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
